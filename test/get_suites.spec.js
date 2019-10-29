@@ -13,7 +13,7 @@ function getTestsFrom(specs) {
   testFramework.initialize({
     mocha_tests: specs,
     mocha_opts: path.join(specs[0], "mocha.opts"),
-    suiteTag: "suite"
+    suiteTag: "suite;multiple"
   });
   return testFramework.iterator({tempDir: path.resolve(".")});
 }
@@ -26,7 +26,7 @@ describe("suite iterator", function () {
   });
 
   it("finds suites", function () {
-    expect(suites).to.have.length(2);
+    expect(suites).to.have.length(3);
   });
 
   it("instantiates tests as Locators", function () {

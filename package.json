@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run lint && mocha --slow 400 && npm run coverage && npm run check-coverage",
-    "lint": "eslint lib/** test/**",
+    "lint": "eslint lib/** test/**.js",
     "coverage": "istanbul cover _mocha -- --recursive",
     "check-coverage": "istanbul check-coverage --statement 95 --function 95 --branch 90"
   },
